@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <h1>randoMaze</h1>
+    <div class="gameInterface">
+      <div class="sidebarLeft">
+        <p class="timer" ><span class="minutes">00</span><span>:</span><span class="seconds">00</span></p>
+      </div>
+      <div class="table">
+
+      </div>
+      <div class="sidebarRight">
+        <div class="easyCounter">
+          <h3>Easy</h3>
+          <div class="counter_info">
+            <div class="easyCounter_info_local">
+              <p>Local</p>
+              <p>00:00</p>
+              <p>???</p>
+            </div>
+            <div class="easyCounter_info_server">
+              <p>Server</p>
+              <p>00:00</p>
+              <p>???</p>
+            </div>
+          </div>
+        </div>
+        <div class="mediumCounter">
+          <h3>Medium</h3>
+          <div class="counter_info">
+            <div class="mediumCounter_info_local">
+              <p>Local</p>
+              <p>00:00</p>
+              <p>???</p>
+            </div>
+            <div class="mediumCounter_info_server">
+              <p>Server</p>
+              <p>00:00</p>
+              <p>???</p>
+            </div>
+          </div>
+        </div>
+        <div class="hardCounter">
+          <h3>Hard</h3>
+          <div class="counter_info">
+            <div class="hardCounter_info_local">
+              <p>Local</p>
+              <p>00:00</p>
+              <p>???</p>
+            </div>
+            <div class="hardCounter_info_server">
+              <p>Server</p>
+              <p>00:00</p>
+              <p>???</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="startOverlay">
+      <div class="startOverlay_container">
+        <h2>Choose the difficulty !</h2>
+        <div class="startOverlay_container_buttonContainer">
+          <a href="#" data="1">Easy</a>
+          <a href="#" data="2">Medium</a>
+          <a href="#" data="3">Hard</a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="scripts/mazeGeneration.js" charset="utf-8"></script>
+  <script src="scripts/mazePlay.js" charset="utf-8"></script>
+  <script src="scripts/interface.js" charset="utf-8"></script>
+</html>

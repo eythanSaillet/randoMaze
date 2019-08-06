@@ -1,0 +1,195 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin:0;
+  padding:0;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size:14px;
+  color:#444;
+  background-color: black;
+}
+
+/* interface */
+
+h1{
+  text-align: center;
+  font-size: 45px;
+  color: white;
+  position: relative;
+  height: 10px;
+}
+
+.gameInterface{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sidebarLeft{
+  width: 15vw;
+  height: 80vh;
+  background: black;
+  border: 1px solid white;
+}
+
+.table{
+  width: 55vw;
+  height: 70vh;
+}
+
+.sidebarRight{
+  width: 15vw;
+  height: 80vh;
+  background: white;
+  background: black;
+  border: 1px solid white;
+  color: white;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+}
+
+/* score sidebar  */
+
+h3{
+  text-align: center;
+  font-size: 1.5vw;
+}
+
+.counter_info{
+  display: flex;
+  justify-content: space-around;
+}
+
+div[class*="Counter_info"] p{
+  text-align: center;
+}
+
+.hardCounter{
+  margin-bottom: 20px;
+}
+
+.counter_info div p:nth-child(1){
+  font-size: 1vw;
+}
+.counter_info div p:nth-child(2){
+  font-size: 1.3vw;
+  color:#CC0000;
+}
+.counter_info div p:nth-child(3){
+  font-size: 1vw;
+}
+
+/* left sidebar */
+
+.sidebarLeft{
+}
+
+.timer{
+  text-align: center;
+  color: #CC0000;
+  font-size: 3.5vw;
+  margin: 30px auto;
+}
+
+/* maze */
+
+table{
+  border: 1px solid white;
+  padding: 0;
+  border-collapse:collapse;
+  width: 55vw;
+  height: 70vh;
+  background-color: black;
+}
+
+td{
+  border: 1px solid white;
+  width: 10px;
+  height : 10px;
+  position: relative;
+}
+td.top{
+  border-top: 0px;
+}
+td.bottom{
+  border-bottom: 0px;
+}
+td.left{
+  border-left: 0px;
+}
+td.right{
+  border-right: 0px;
+}
+
+.player{
+  position: absolute;
+  background: red;
+  top: 50%;
+  left: 50%;
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  transform: translate(-50%,-50%);
+  transition: all 0.4s ease-out;
+}
+
+.finishCell{
+  position: absolute;
+  background: green;
+  top: 50%;
+  left: 50%;
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  transform: translate(-50%,-50%);
+  transition: all 0.4s ease-out;
+}
+
+/* startOverlay */
+
+.startOverlay{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height:100vh;
+  background: black;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.startOverlay_container{
+  width: 60%;
+  height: 50%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  border: solid 1px white;
+
+}
+
+.startOverlay_container h2{
+  font-size: 4em;
+  display: inline-block;
+  text-align: center;
+  color: white;
+}
+
+.startOverlay_container_buttonContainer{
+  display: flex;
+  justify-content: space-around;
+}
+
+.startOverlay_container_buttonContainer a{
+  color: white;
+  display: inline-block;
+  padding: 10px;
+  font-size: 3em;
+  text-decoration: none;
+  border: solid 1px red;
+}
