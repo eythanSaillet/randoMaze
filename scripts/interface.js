@@ -181,7 +181,13 @@ function easyRecordSaving(){
   let easyRecordTimeDOM = document.querySelector('.easyCounter_info_local p:nth-child(2)')
   let easyRecordNameDOM = document.querySelector('.easyCounter_info_local p:nth-child(3)')
 
-  let time = timer.minutes +""+ timer.seconds
+  let time
+  if(timer.seconds<10){
+    time = timer.minutes +"0"+ timer.seconds
+  }
+  else{
+    time = timer.minutes +""+ timer.seconds
+  }
   let easyRecordJSON = JSON.parse(localStorage.getItem('easyRecord'))
   let easyRecord = easyRecordJSON[1]
   console.log(easyRecordJSON,easyRecord)
@@ -193,7 +199,12 @@ function easyRecordSaving(){
     }while(name.length>3 || name.length<3)
     nameJSON = JSON.stringify([name,time])
     localStorage.setItem("easyRecord",nameJSON)
-    easyRecordTimeDOM.innerHTML = timer.minutes+ ":" + timer.seconds
+    if(timer.seconds<10){
+      hardRecordTimeDOM.innerHTML = timer.minutes+ ":0" + timer.seconds
+    }
+    else{
+      hardRecordTimeDOM.innerHTML = timer.minutes+ ":" + timer.seconds
+    }
     easyRecordNameDOM.innerHTML = name
   }
 }
@@ -202,7 +213,13 @@ function mediumRecordSaving(){
   let mediumRecordTimeDOM = document.querySelector('.mediumCounter_info_local p:nth-child(2)')
   let mediumRecordNameDOM = document.querySelector('.mediumCounter_info_local p:nth-child(3)')
 
-  let time = timer.minutes +""+ timer.seconds
+  let time
+  if(timer.seconds<10){
+    time = timer.minutes +"0"+ timer.seconds
+  }
+  else{
+    time = timer.minutes +""+ timer.seconds
+  }
   let mediumRecordJSON = JSON.parse(localStorage.getItem('mediumRecord'))
   let mediumRecord = mediumRecordJSON[1]
   console.log(mediumRecordJSON,mediumRecord)
@@ -214,7 +231,12 @@ function mediumRecordSaving(){
     }while(name.length>3 || name.length<3)
     nameJSON = JSON.stringify([name,time])
     localStorage.setItem("mediumRecord",nameJSON)
-    mediumRecordTimeDOM.innerHTML = timer.minutes+ ":" + timer.seconds
+    if(timer.seconds<10){
+      hardRecordTimeDOM.innerHTML = timer.minutes+ ":0" + timer.seconds
+    }
+    else{
+      hardRecordTimeDOM.innerHTML = timer.minutes+ ":" + timer.seconds
+    }
     mediumRecordNameDOM.innerHTML = name
   }
 }
@@ -222,8 +244,13 @@ function mediumRecordSaving(){
 function hardRecordSaving(){
   let hardRecordTimeDOM = document.querySelector('.hardCounter_info_local p:nth-child(2)')
   let hardRecordNameDOM = document.querySelector('.hardCounter_info_local p:nth-child(3)')
-
-  let time = timer.minutes +""+ timer.seconds
+  let time
+  if(timer.seconds<10){
+    time = timer.minutes +"0"+ timer.seconds
+  }
+  else{
+    time = timer.minutes +""+ timer.seconds
+  }
   let hardRecordJSON = JSON.parse(localStorage.getItem('hardRecord'))
   let hardRecord = hardRecordJSON[1]
   console.log(hardRecordJSON,hardRecord)
@@ -235,7 +262,12 @@ function hardRecordSaving(){
     }while(name.length>3 || name.length<3)
     nameJSON = JSON.stringify([name,time])
     localStorage.setItem("hardRecord",nameJSON)
-    hardRecordTimeDOM.innerHTML = timer.minutes+ ":" + timer.seconds
+    if(timer.seconds<10){
+      hardRecordTimeDOM.innerHTML = timer.minutes+ ":0" + timer.seconds
+    }
+    else{
+      hardRecordTimeDOM.innerHTML = timer.minutes+ ":" + timer.seconds
+    }
     hardRecordNameDOM.innerHTML = name
   }
 }
